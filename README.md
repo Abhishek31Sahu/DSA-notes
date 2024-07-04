@@ -1,3 +1,3 @@
-# demo
-this is my first repository<br>
-author - abhishek
+# Data Structure And Algorithm 
+
+Author - Abhishek Sahu
