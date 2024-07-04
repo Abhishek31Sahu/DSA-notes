@@ -1,7 +1,4 @@
-
-
-
-public class Recurision{
+public class maxInArray{
     public static int printMax(int[] array , int index ){
         if(index==array.length-1){
             return array[index];
