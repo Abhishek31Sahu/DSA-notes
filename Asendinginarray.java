@@ -9,6 +9,7 @@ public class Asendinginarray {
       //input
       for(int i=0; i<size; i++) {
           numbers[i] = sc.nextInt();
+          sc.close();
       }
 
 

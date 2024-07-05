@@ -29,6 +29,7 @@ public class arrayformation {
         for(int i=0;i<size;i++){
             System.out.println("input the data of array of index "+i);
             number[i]=sc.nextInt();
+            sc.close();
 
         }
         System.out.println("total data entry");
