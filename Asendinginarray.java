@@ -9,8 +9,9 @@ public class Asendinginarray {
       //input
       for(int i=0; i<size; i++) {
           numbers[i] = sc.nextInt();
-          sc.close();
+          
       }
+      sc.close();
 
 
       boolean isAscending = true;
@@ -18,6 +19,7 @@ public class Asendinginarray {
        for(int i=0; i<numbers.length-1; i++) { // NOTICE numbers.length - 1 as termination condition
            if(numbers[i] > numbers[i+1]) { // This is the condition for descending order
                isAscending = false;
+            break;
            }
        }
 
