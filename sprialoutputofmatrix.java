@@ -12,7 +12,7 @@ public class sprialoutputofmatrix {
 
         for(int i=0;i<r;i++){
             for(int m=0;m<c;m++){
-                matrix[r][m] = sc.nextInt();
+                matrix[i][m] = sc.nextInt();
             }
         }
 
@@ -22,19 +22,19 @@ public class sprialoutputofmatrix {
         int colend=c-1;
 
         while(rowstart<=rowend&&colstart<=colend){
-            for(int i=0;i<=colend;i++){
+            for(int i=colstart;i<=colend;i++){
                 System.out.print(matrix[rowstart][i]+" ");
             }
             rowstart++;
-            for(int i=0;i<=rowend;i++){
+            for(int i=rowstart;i<=rowend;i++){
                 System.out.print(matrix[i][colend]+" ");
             }
             colend--;
-            for(int i=colend;i<=colstart;i--){
+            for(int i=colend;i>=colstart;i--){
                 System.out.print(matrix[rowend][i]+" ");
             }
             rowend--;
-            for(int i=rowend;i<=rowstart;i--){
+            for(int i=rowend;i>=rowstart;i--){
                 System.out.print(matrix[i][colstart]+" ");
             }
             colstart++;
