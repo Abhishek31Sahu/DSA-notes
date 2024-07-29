@@ -1,35 +1,23 @@
 
-import java.util.Scanner;
 
 public class insertingSorting {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
+    
+        int [] arr ={6,4,8,3,68};
         
-        int number[] = new int [size];
-        for (int i = 0; i < size; i++) {
-            number[i] = sc.nextInt();
-            
-        }
-        
-        for (int i = 1; i < size; i++) {
-            int current = number[i];
-            int j=i-1;
-                while(j>=0&&current<number[j]){
-                number[j+1]=number[j];
+        for (int i = 1; i < arr.length; i++) {
+            int j = i;
+            while(j>0&&arr[j-1]>arr[j]){
+                int temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
                 j--;
-                }
-
-            number[j+1] = current;
-                
-                
-
+            }
         }
-            
-        
-        for (int i = 0; i < size; i++) {
-            System.out.print(number[i]+" ");
-            
+    
+        for(int abhi : arr){
+            System.out.print(abhi+ " ");
         }
     }
 }
+

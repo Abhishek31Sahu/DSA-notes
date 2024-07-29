@@ -1,7 +1,12 @@
+
+import java.util.Scanner;
+
 public class maxInArray{
     public static int printMax(int[] array , int index ){
         if(index==array.length-1){
-            return array[index];
+            
+    
+            return max ;
         }
         int abhi = printMax(array, index+1);
         
@@ -11,8 +16,15 @@ public class maxInArray{
 
     }
     public static void main(String args[]){
-        int[] array={2,3,7,9};
-        // int len = array.length;
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int [] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i]=sc.nextInt();
+            
+        }
+        // int[] array={2,3,7,9};
+        
         System.out.println(printMax(array, 0));
 
 
@@ -20,3 +32,4 @@ public class maxInArray{
     }
     
 }
+    
