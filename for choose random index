@@ -1,0 +1,31 @@
+Certainly! If you want to select a random variable from a set of predefined variables in Java, there are a few approaches you can take:
+
+1. **Using an Array:**
+   - Put your variables (e.g., `one`, `two`, `three`) into an array.
+   - Generate a random index using a random number generator (e.g., `Random.nextInt()`).
+   - Retrieve the variable at the randomly chosen index from the array³.
+
+2. **Using a List:**
+   - Store your variables in a list (e.g., an `ArrayList`).
+   - Generate a random index within the range of the list size.
+   - Retrieve the variable at the randomly chosen index from the list⁴.
+
+Here's a simple example using an array:
+
+```java
+private String[] variables = { "abc", "def", "ghi" };
+
+public String getRandomVariable() {
+    Random random = new Random();
+    int randomIndex = random.nextInt(variables.length);
+    return variables[randomIndex];
+}
+
+
+
+
+Source: Conversation with Copilot, 4/8/2024
+(1) java - How to randomly pick an element from an array - Stack Overflow. https://stackoverflow.com/questions/8065532/how-to-randomly-pick-an-element-from-an-array.
+(2) Java - Get Random Item/Element From a List | Baeldung. https://www.baeldung.com/java-random-list-element.
+(3) Select random Java variable? Is this possible - Stack Overflow. https://stackoverflow.com/questions/9470104/select-random-java-variable-is-this-possible.
+(4) How do I generate random integers within a specific range in Java .... https://www.geeksforgeeks.org/how-do-i-generate-random-integers-within-a-specific-range-in-java/.

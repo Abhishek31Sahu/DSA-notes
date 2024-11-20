@@ -5,11 +5,10 @@ public class allfunctionstringBuilder{
         System.out.println(sb);
         sb.setCharAt(3, 's');
         System.out.println(sb);
-        
-        // sb.charAt(1);
-        
-
+        sb.delete(3, 4);
+        System.out.println(sb);
+        sb.deleteCharAt(1);
+        System.out.println(sb);
         
     }
-
 }
