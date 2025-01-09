@@ -32,9 +32,9 @@ static void creategraph(ArrayList<edge> graph[]){
     graph[5].add(new edge(5, 6, 1));
     graph[6].add(new edge(6, 5, 1));
 } 
-static void BFS(ArrayList<edge> graph[],boolean isVisted[]){
+static void BFS(ArrayList<edge> graph[],int j,boolean isVisted[]){
     Queue<Integer> q = new LinkedList<>();
-    q.add(0);
+    q.add(j);
     while(!q.isEmpty()){
         int curr = q.poll();
         
@@ -50,10 +50,10 @@ static void BFS(ArrayList<edge> graph[],boolean isVisted[]){
 }
 static void disconnectedGraph(ArrayList<edge> graph[]){
     
-    boolean isVisted[]=new boolean[7];
-    for(int i=0;i<7;i++){
+    boolean isVisted[]=new boolean[graph.length];
+    for(int i=0;i<graph.length;i++){
         if(!isVisted[i]){
-            BFS(graph,isVisted);
+            BFS(graph,i,isVisted);
         }
     }
 }
@@ -65,7 +65,8 @@ public static void main(String[] args) {
  \       | /
   2 ---- 4
  */
-    ArrayList<edge> graph[]=new ArrayList[7];
+    int s = 7;
+    ArrayList<edge> graph[]=new ArrayList[s];
     creategraph(graph);
     disconnectedGraph(graph);
 }
