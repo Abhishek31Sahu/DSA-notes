@@ -58,6 +58,13 @@ static void disconnectedGraph(ArrayList<edge> graph[]){
     }
 }
 public static void main(String[] args) {
+     /*
+   1 --- 3
+ /       | \
+ 0       |   5 -- 6
+ \       | /
+  2 ---- 4
+ */
     ArrayList<edge> graph[]=new ArrayList[7];
     creategraph(graph);
     disconnectedGraph(graph);
